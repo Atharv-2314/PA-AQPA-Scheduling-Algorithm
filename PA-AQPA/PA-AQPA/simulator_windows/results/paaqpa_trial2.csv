@@ -1,0 +1,6 @@
+pid,name,priority,final_priority,wait_time,turnaround,response_time,context_switches,cpu_time,state
+1,hog_0,10,10,1176,1575,0,21,400,DONE
+2,hog_1,10,10,1187,1586,7,21,400,DONE
+3,hog_2,10,10,1195,1594,17,21,400,DONE
+4,hog_3,10,10,1201,1600,29,21,400,DONE
+99,starved,200,200,1601,1700,1600,89,100,DONE

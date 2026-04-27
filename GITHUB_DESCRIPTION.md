@@ -1,0 +1,1 @@
+PA-AQPA (Priority-Aware Adaptive Quantum with Predictive Aging) is a novel hybrid CPU scheduler for xv6 and Linux. It features EWMA-based predictive quantum sizing, priority-scaled multipliers for responsiveness, and bounded aging with exponential decay to eliminate starvation while maintaining stability. Engineered for high-performance OS research.

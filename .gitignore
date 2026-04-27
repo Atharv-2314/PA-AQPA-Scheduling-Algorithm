@@ -1,0 +1,51 @@
+# OS Objects
+*.o
+*.d
+*.asm
+*.sym
+
+# Kernel Images
+xv6.img
+fs.img
+kernel
+kernel.asm
+kernel.sym
+vectors.S
+bootblock
+bootblock.asm
+bootblock.sym
+initcode
+initcode.out
+mkfs
+
+# Linux Kernel Modules
+*.ko
+*.mod.c
+*.mod
+*.order
+*.markers
+*.symvers
+.tmp_versions/
+.*.cmd
+.cache.mk
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Analysis & Plots
+PA-AQPA/PA-AQPA/analysis/plots/*.png
+PA-AQPA/PA-AQPA/analysis/experiment_data/*.csv
+
+# PDF Reports
+*.pdf
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini

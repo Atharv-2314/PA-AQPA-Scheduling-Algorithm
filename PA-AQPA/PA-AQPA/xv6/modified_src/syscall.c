@@ -1,0 +1,65 @@
+#include "types.h"
+#include "defs.h"
+#include "param.h"
+#include "memlayout.h"
+#include "mmu.h"
+#include "proc.h"
+#include "x86.h"
+#include "syscall.h"
+
+// Existing syscalls
+extern int sys_fork(void);
+extern int sys_exit(void);
+extern int sys_wait(void);
+extern int sys_pipe(void);
+extern int sys_read(void);
+extern int sys_kill(void);
+extern int sys_exec(void);
+extern int sys_fstat(void);
+extern int sys_chdir(void);
+extern int sys_dup(void);
+extern int sys_getpid(void);
+extern int sys_sbrk(void);
+extern int sys_sleep(void);
+extern int sys_uptime(void);
+extern int sys_open(void);
+extern int sys_write(void);
+extern int sys_mknod(void);
+extern int sys_unlink(void);
+extern int sys_link(void);
+extern int sys_mkdir(void);
+extern int sys_close(void);
+
+// YOUR NEW SYSCALLS
+extern int sys_setpriority(void);
+extern int sys_getpriority(void);
+extern int sys_schedstat(void);
+
+static int (*syscalls[])(void) = {
+  [SYS_fork]    sys_fork,
+  [SYS_exit]    sys_exit,
+  [SYS_wait]    sys_wait,
+  [SYS_pipe]    sys_pipe,
+  [SYS_read]    sys_read,
+  [SYS_kill]    sys_kill,
+  [SYS_exec]    sys_exec,
+  [SYS_fstat]   sys_fstat,
+  [SYS_chdir]   sys_chdir,
+  [SYS_dup]     sys_dup,
+  [SYS_getpid]  sys_getpid,
+  [SYS_sbrk]    sys_sbrk,
+  [SYS_sleep]   sys_sleep,
+  [SYS_uptime]  sys_uptime,
+  [SYS_open]    sys_open,
+  [SYS_write]   sys_write,
+  [SYS_mknod]   sys_mknod,
+  [SYS_unlink]  sys_unlink,
+  [SYS_link]    sys_link,
+  [SYS_mkdir]   sys_mkdir,
+  [SYS_close]   sys_close,
+
+  // NEW
+  [SYS_setpriority] sys_setpriority,
+  [SYS_getpriority] sys_getpriority,
+  [SYS_schedstat]   sys_schedstat,
+};
