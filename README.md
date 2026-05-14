@@ -100,7 +100,6 @@ python simulator/simulator.py --config config.json
 ## 👥 Authors
 - **Atharv Kumar**
 - **Aarnav Arya**
-- **Adwit Gautam**
 - **Akshaj Singh**
 
 ---
